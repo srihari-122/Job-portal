@@ -16,6 +16,7 @@ nltk
 scikit-learn
 numpy
 pandas
+email-validator
 # Database drivers
 pymysql
 sqlalchemy
