@@ -3,11 +3,13 @@ uvicorn[standard]
 python-multipart
 jinja2
 python-jose[cryptography]
+PyJWT
 passlib[bcrypt]
 python-dotenv
 aiofiles
 PyPDF2
 python-dateutil
+pymongo
 # Database drivers
 pymysql
 sqlalchemy
