@@ -1,0 +1,60 @@
+{
+  "manjari1998@gmail.com": {
+    "name": "Pratik Tarale",
+    "role": "Role not found",
+    "email": "ptaraleintern@gmail.com",
+    "phone": "8123451302",
+    "skills": [
+      "Java",
+      "Python",
+      "JavaScript",
+      "Spring",
+      "HTML",
+      "CSS",
+      "SQL",
+      "Azure",
+      "Git",
+      "GitHub",
+      "Agile",
+      "DevOps",
+      "CI/CD",
+      "Power BI",
+      "R"
+    ],
+    "experience": {
+      "total_years": 0,
+      "total_months": 0,
+      "display": "Fresher (0 years)",
+      "is_fresher": true,
+      "experience_periods": [],
+      "extraction_method": "fresher_detection"
+    },
+    "location": "user and \nsystem data logs",
+    "education": [
+      {
+        "degree": "MASTER",
+        "institution": "Not specified",
+        "year": "Not specified"
+      },
+      {
+        "degree": "BACHELOR",
+        "institution": "Not specified",
+        "year": "Not specified"
+      },
+      {
+        "degree": "A",
+        "institution": "Not specified",
+        "year": "Not specified"
+      },
+      {
+        "degree": "B",
+        "institution": "Not specified",
+        "year": "Not specified"
+      }
+    ],
+    "raw_text": " \n   \nPRATIK P TARALE  \n \nPROFILE  \nAnalytical and self -driven Postgraduate \nMCA student with a strong foundation in \ndata analytics, product thinking, and \nsystem engineering. Former Assistant \nSystem Engineer at TCS with hands -on \nexperience in CI/CD pipelines, Azure \ntools, SQL, and Power BI. Certified in \nAdvanced SQL, Azure Development . \nI am passionate  about leveraging data to \ndrive product insights and improve user \nexperiences. Known for a fast-learning  \ncurve, ownership mindset, a",
+    "extraction_method": "reliable_extraction",
+    "confidence_score": 1.0,
+    "extraction_timestamp": "2025-10-17T19:12:57.109610"
+  }
+}

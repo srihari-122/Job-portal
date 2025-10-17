@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+python-multipart
+jinja2
+python-jose[cryptography]
+passlib[bcrypt]
+python-dotenv
+aiofiles
+PyPDF2
+python-dateutil
+# Database drivers
+pymysql
+sqlalchemy
+psycopg2-binary
+# Optional: for async support
+aiomysql
+asyncpg

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .file-input {
+            width: 100%;
+            padding: 20px;
+            border: 3px dashed #8b5cf6;
+            border-radius: 10px;
+            background-color: #f8f7ff;
+            text-align: center;
+            cursor: pointer;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+        .file-input:hover {
+            border-color: #7c3aed;
+            background-color: #f3f0ff;
+        }
+        .button {
+            background-color: #8b5cf6;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            width: 100%;
+        }
+        .button:hover {
+            background-color: #7c3aed;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .success {
+            background-color: #d1fae5;
+            color: #065f46;
+            border: 1px solid #10b981;
+        }
+        .error {
+            background-color: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #ef4444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📄 Resume Upload Test</h1>
+        <p>This is a simple test to verify file upload works.</p>
+        
+        <input type="file" id="fileInput" accept=".pdf" class="file-input" onchange="handleFileSelect(event)">
+        
+        <button onclick="testClick()" class="button">🧪 Test File Input Click</button>
+        
+        <button onclick="createNewInput()" class="button">➕ Create New File Input</button>
+        
+        <div id="status"></div>
+        
+        <div id="fileInfo"></div>
+    </div>
+
+    <script>
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                showStatus(`✅ File selected: ${file.name} (${file.size} bytes)`, 'success');
+                showFileInfo(file);
+            } else {
+                showStatus('❌ No file selected', 'error');
+            }
+        }
+
+        function testClick() {
+            console.log('🧪 Testing file input click...');
+            const fileInput = document.getElementById('fileInput');
+            if (fileInput) {
+                console.log('✅ File input found');
+                fileInput.click();
+                showStatus('🎯 File input clicked - check if dialog opened', 'success');
+            } else {
+                console.log('❌ File input not found');
+                showStatus('❌ File input not found', 'error');
+            }
+        }
+
+        function createNewInput() {
+            console.log('➕ Creating new file input...');
+            const newInput = document.createElement('input');
+            newInput.type = 'file';
+            newInput.accept = '.pdf';
+            newInput.style.display = 'none';
+            
+            newInput.onchange = function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    showStatus(`✅ New input file selected: ${file.name}`, 'success');
+                }
+                document.body.removeChild(newInput);
+            };
+            
+            document.body.appendChild(newInput);
+            newInput.click();
+            showStatus('🎯 New file input created and clicked', 'success');
+        }
+
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.textContent = message;
+            statusDiv.className = `status ${type}`;
+        }
+
+        function showFileInfo(file) {
+            const infoDiv = document.getElementById('fileInfo');
+            infoDiv.innerHTML = `
+                <h3>📋 File Information:</h3>
+                <p><strong>Name:</strong> ${file.name}</p>
+                <p><strong>Size:</strong> ${file.size} bytes</p>
+                <p><strong>Type:</strong> ${file.type}</p>
+                <p><strong>Last Modified:</strong> ${new Date(file.lastModified).toLocaleString()}</p>
+            `;
+        }
+
+        // Test on page load
+        window.onload = function() {
+            console.log('🚀 Page loaded, testing file input...');
+            const fileInput = document.getElementById('fileInput');
+            if (fileInput) {
+                console.log('✅ File input exists on page load');
+                showStatus('✅ Page loaded successfully - file input ready', 'success');
+            } else {
+                console.log('❌ File input not found on page load');
+                showStatus('❌ File input not found on page load', 'error');
+            }
+        };
+    </script>
+</body>
+</html>
+
