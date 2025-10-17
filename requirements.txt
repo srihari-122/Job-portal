@@ -12,6 +12,10 @@ python-docx
 python-dateutil
 pymongo
 spacy
+nltk
+scikit-learn
+numpy
+pandas
 # Database drivers
 pymysql
 sqlalchemy
